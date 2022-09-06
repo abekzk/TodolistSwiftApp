@@ -14,6 +14,12 @@
 		3044B66F28C4EF7F004DB310 /* TodolistSwiftAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044B66E28C4EF7F004DB310 /* TodolistSwiftAppTests.swift */; };
 		3044B67928C4EF7F004DB310 /* TodolistSwiftAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044B67828C4EF7F004DB310 /* TodolistSwiftAppUITests.swift */; };
 		3044B67B28C4EF7F004DB310 /* TodolistSwiftAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044B67A28C4EF7F004DB310 /* TodolistSwiftAppUITestsLaunchTests.swift */; };
+		3044B68928C57291004DB310 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3044B68828C57291004DB310 /* Alamofire */; };
+		3044B68B28C6BC26004DB310 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3044B68A28C6BC26004DB310 /* GoogleService-Info.plist */; };
+		3044B68C28C6BC26004DB310 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3044B68A28C6BC26004DB310 /* GoogleService-Info.plist */; };
+		3044B68D28C6BC26004DB310 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3044B68A28C6BC26004DB310 /* GoogleService-Info.plist */; };
+		3044B69028C6BD38004DB310 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3044B68F28C6BD38004DB310 /* FirebaseAnalytics */; };
+		3044B69228C6BD38004DB310 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3044B69128C6BD38004DB310 /* FirebaseAuth */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +50,7 @@
 		3044B67428C4EF7F004DB310 /* TodolistSwiftAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodolistSwiftAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3044B67828C4EF7F004DB310 /* TodolistSwiftAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodolistSwiftAppUITests.swift; sourceTree = "<group>"; };
 		3044B67A28C4EF7F004DB310 /* TodolistSwiftAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodolistSwiftAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3044B68A28C6BC26004DB310 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +58,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3044B69028C6BD38004DB310 /* FirebaseAnalytics in Frameworks */,
+				3044B69228C6BD38004DB310 /* FirebaseAuth in Frameworks */,
+				3044B68928C57291004DB310 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +107,7 @@
 				3044B65D28C4EF7E004DB310 /* TodolistSwiftAppApp.swift */,
 				3044B65F28C4EF7E004DB310 /* ContentView.swift */,
 				3044B66128C4EF7F004DB310 /* Assets.xcassets */,
+				3044B68A28C6BC26004DB310 /* GoogleService-Info.plist */,
 				3044B66328C4EF7F004DB310 /* Preview Content */,
 			);
 			path = TodolistSwiftApp;
@@ -143,6 +154,11 @@
 			dependencies = (
 			);
 			name = TodolistSwiftApp;
+			packageProductDependencies = (
+				3044B68828C57291004DB310 /* Alamofire */,
+				3044B68F28C6BD38004DB310 /* FirebaseAnalytics */,
+				3044B69128C6BD38004DB310 /* FirebaseAuth */,
+			);
 			productName = TodolistSwiftApp;
 			productReference = 3044B65A28C4EF7E004DB310 /* TodolistSwiftApp.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +231,10 @@
 				Base,
 			);
 			mainGroup = 3044B65128C4EF7E004DB310;
+			packageReferences = (
+				3044B68728C57291004DB310 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				3044B68E28C6BD38004DB310 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 3044B65B28C4EF7E004DB310 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,6 +253,7 @@
 			files = (
 				3044B66528C4EF7F004DB310 /* Preview Assets.xcassets in Resources */,
 				3044B66228C4EF7F004DB310 /* Assets.xcassets in Resources */,
+				3044B68B28C6BC26004DB310 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +261,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3044B68C28C6BC26004DB310 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +269,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3044B68D28C6BC26004DB310 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,6 +600,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3044B68728C57291004DB310 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		3044B68E28C6BD38004DB310 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3044B68828C57291004DB310 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3044B68728C57291004DB310 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		3044B68F28C6BD38004DB310 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3044B68E28C6BD38004DB310 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		3044B69128C6BD38004DB310 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3044B68E28C6BD38004DB310 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3044B65228C4EF7E004DB310 /* Project object */;
 }

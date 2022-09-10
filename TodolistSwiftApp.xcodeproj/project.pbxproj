@@ -20,6 +20,12 @@
 		3044B68D28C6BC26004DB310 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3044B68A28C6BC26004DB310 /* GoogleService-Info.plist */; };
 		3044B69028C6BD38004DB310 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3044B68F28C6BD38004DB310 /* FirebaseAnalytics */; };
 		3044B69228C6BD38004DB310 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3044B69128C6BD38004DB310 /* FirebaseAuth */; };
+		3044B69528CC374F004DB310 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044B69428CC374F004DB310 /* Task.swift */; };
+		3044B69628CC374F004DB310 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044B69428CC374F004DB310 /* Task.swift */; };
+		3044B69728CC374F004DB310 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044B69428CC374F004DB310 /* Task.swift */; };
+		3044B69928CC41B9004DB310 /* TodolistItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044B69828CC41B9004DB310 /* TodolistItemView.swift */; };
+		3044B69A28CC41B9004DB310 /* TodolistItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044B69828CC41B9004DB310 /* TodolistItemView.swift */; };
+		3044B69B28CC41B9004DB310 /* TodolistItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044B69828CC41B9004DB310 /* TodolistItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,8 @@
 		3044B67828C4EF7F004DB310 /* TodolistSwiftAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodolistSwiftAppUITests.swift; sourceTree = "<group>"; };
 		3044B67A28C4EF7F004DB310 /* TodolistSwiftAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodolistSwiftAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3044B68A28C6BC26004DB310 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3044B69428CC374F004DB310 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		3044B69828CC41B9004DB310 /* TodolistItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodolistItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +114,7 @@
 			children = (
 				3044B69328CC362E004DB310 /* Models */,
 				3044B65D28C4EF7E004DB310 /* TodolistSwiftAppApp.swift */,
+				3044B69828CC41B9004DB310 /* TodolistItemView.swift */,
 				3044B65F28C4EF7E004DB310 /* TodolistView.swift */,
 				3044B66128C4EF7F004DB310 /* Assets.xcassets */,
 				3044B68A28C6BC26004DB310 /* GoogleService-Info.plist */,
@@ -142,6 +151,7 @@
 		3044B69328CC362E004DB310 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3044B69428CC374F004DB310 /* Task.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -289,6 +299,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3044B66028C4EF7E004DB310 /* TodolistView.swift in Sources */,
+				3044B69928CC41B9004DB310 /* TodolistItemView.swift in Sources */,
+				3044B69528CC374F004DB310 /* Task.swift in Sources */,
 				3044B65E28C4EF7E004DB310 /* TodolistSwiftAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,6 +309,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3044B69628CC374F004DB310 /* Task.swift in Sources */,
+				3044B69A28CC41B9004DB310 /* TodolistItemView.swift in Sources */,
 				3044B66F28C4EF7F004DB310 /* TodolistSwiftAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,6 +320,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3044B67B28C4EF7F004DB310 /* TodolistSwiftAppUITestsLaunchTests.swift in Sources */,
+				3044B69B28CC41B9004DB310 /* TodolistItemView.swift in Sources */,
+				3044B69728CC374F004DB310 /* Task.swift in Sources */,
 				3044B67928C4EF7F004DB310 /* TodolistSwiftAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

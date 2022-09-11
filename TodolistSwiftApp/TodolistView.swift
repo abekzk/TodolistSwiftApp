@@ -13,7 +13,7 @@ struct TodolistView: View {
     var body: some View {
         List {
             ForEach(tasks, id: \.id) { task in
-                NavigationLink(destination: Text(task.title)) {
+                NavigationLink(destination: TaskDetailView(task: task)) {
                     TodolistItemView(task: task)
                 }
             }

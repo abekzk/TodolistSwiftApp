@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TodolistView: View {
     let tasks: [Task]
-    
+
     var body: some View {
         List {
             ForEach(tasks, id: \.id) { task in

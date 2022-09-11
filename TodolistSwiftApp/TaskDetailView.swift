@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TaskDetailView: View {
     let task: Task
-    
+
     var body: some View {
         Text(task.description)
     }
@@ -17,7 +17,7 @@ struct TaskDetailView: View {
 
 struct TaskDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView{
+        NavigationView {
             TaskDetailView(task: Task.sampleData[0])
         }
     }

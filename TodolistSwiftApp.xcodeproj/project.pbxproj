@@ -29,6 +29,7 @@
 		3044B69D28CC8D1B004DB310 /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044B69C28CC8D1B004DB310 /* TaskDetailView.swift */; };
 		3044B69E28CC8D1B004DB310 /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044B69C28CC8D1B004DB310 /* TaskDetailView.swift */; };
 		3044B69F28CC8D1B004DB310 /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044B69C28CC8D1B004DB310 /* TaskDetailView.swift */; };
+		3044B6A228CD937A004DB310 /* TaskStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044B6A128CD937A004DB310 /* TaskStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		3044B69428CC374F004DB310 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		3044B69828CC41B9004DB310 /* TodolistItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodolistItemView.swift; sourceTree = "<group>"; };
 		3044B69C28CC8D1B004DB310 /* TaskDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
+		3044B6A128CD937A004DB310 /* TaskStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				3044B65F28C4EF7E004DB310 /* TodolistView.swift */,
 				3044B69828CC41B9004DB310 /* TodolistItemView.swift */,
 				3044B69C28CC8D1B004DB310 /* TaskDetailView.swift */,
+				3044B6A128CD937A004DB310 /* TaskStore.swift */,
 				3044B66128C4EF7F004DB310 /* Assets.xcassets */,
 				3044B68A28C6BC26004DB310 /* GoogleService-Info.plist */,
 				3044B66328C4EF7F004DB310 /* Preview Content */,
@@ -326,6 +329,7 @@
 			files = (
 				3044B66028C4EF7E004DB310 /* TodolistView.swift in Sources */,
 				3044B69928CC41B9004DB310 /* TodolistItemView.swift in Sources */,
+				3044B6A228CD937A004DB310 /* TaskStore.swift in Sources */,
 				3044B69528CC374F004DB310 /* Task.swift in Sources */,
 				3044B65E28C4EF7E004DB310 /* TodolistSwiftAppApp.swift in Sources */,
 				3044B69D28CC8D1B004DB310 /* TaskDetailView.swift in Sources */,

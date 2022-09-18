@@ -30,6 +30,7 @@
 		3044B69E28CC8D1B004DB310 /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044B69C28CC8D1B004DB310 /* TaskDetailView.swift */; };
 		3044B69F28CC8D1B004DB310 /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044B69C28CC8D1B004DB310 /* TaskDetailView.swift */; };
 		3044B6A228CD937A004DB310 /* TaskStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044B6A128CD937A004DB310 /* TaskStore.swift */; };
+		30570E8B28D6F0A50064D36B /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30570E8A28D6F0A50064D36B /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,10 @@
 		3044B69828CC41B9004DB310 /* TodolistItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodolistItemView.swift; sourceTree = "<group>"; };
 		3044B69C28CC8D1B004DB310 /* TaskDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
 		3044B6A128CD937A004DB310 /* TaskStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStore.swift; sourceTree = "<group>"; };
+		30570E8728D6E63A0064D36B /* Config.Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.Debug.xcconfig; sourceTree = "<group>"; };
+		30570E8828D6EC560064D36B /* Config.Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.Release.xcconfig; sourceTree = "<group>"; };
+		30570E8A28D6F0A50064D36B /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		30570E8C28D726370064D36B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +106,8 @@
 				3044B65C28C4EF7E004DB310 /* TodolistSwiftApp */,
 				3044B66D28C4EF7F004DB310 /* TodolistSwiftAppTests */,
 				3044B67728C4EF7F004DB310 /* TodolistSwiftAppUITests */,
+				30570E8728D6E63A0064D36B /* Config.Debug.xcconfig */,
+				30570E8828D6EC560064D36B /* Config.Release.xcconfig */,
 				3044B65B28C4EF7E004DB310 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -118,6 +125,8 @@
 		3044B65C28C4EF7E004DB310 /* TodolistSwiftApp */ = {
 			isa = PBXGroup;
 			children = (
+				30570E8C28D726370064D36B /* Info.plist */,
+				30570E8928D6F0920064D36B /* Configs */,
 				3044B69328CC362E004DB310 /* Models */,
 				3044B65D28C4EF7E004DB310 /* TodolistSwiftAppApp.swift */,
 				3044B65F28C4EF7E004DB310 /* TodolistView.swift */,
@@ -162,6 +171,14 @@
 				3044B69428CC374F004DB310 /* Task.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		30570E8928D6F0920064D36B /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				30570E8A28D6F0A50064D36B /* Config.swift */,
+			);
+			path = Configs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,6 +347,7 @@
 				3044B66028C4EF7E004DB310 /* TodolistView.swift in Sources */,
 				3044B69928CC41B9004DB310 /* TodolistItemView.swift in Sources */,
 				3044B6A228CD937A004DB310 /* TaskStore.swift in Sources */,
+				30570E8B28D6F0A50064D36B /* Config.swift in Sources */,
 				3044B69528CC374F004DB310 /* Task.swift in Sources */,
 				3044B65E28C4EF7E004DB310 /* TodolistSwiftAppApp.swift in Sources */,
 				3044B69D28CC8D1B004DB310 /* TaskDetailView.swift in Sources */,
@@ -377,6 +395,7 @@
 /* Begin XCBuildConfiguration section */
 		3044B67C28C4EF7F004DB310 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30570E8728D6E63A0064D36B /* Config.Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -437,6 +456,7 @@
 		};
 		3044B67D28C4EF7F004DB310 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30570E8828D6EC560064D36B /* Config.Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -499,6 +519,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TodolistSwiftApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TodolistSwiftApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -527,6 +548,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TodolistSwiftApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TodolistSwiftApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

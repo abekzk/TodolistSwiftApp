@@ -26,7 +26,7 @@ class TaskStore: ObservableObject {
     }
 
     static func fetch(completion: @escaping (Result<[Task], Error>) -> Void) {
-        AF.request("http://localhost:8080/public/tasks").responseDecodable(of: [Task].self) { response in
+        AF.request(Configs.apiURL + "/public/tasks").responseDecodable(of: [Task].self) { response in
             switch response.result {
             case .success(let tasks):
                 completion(.success(tasks))

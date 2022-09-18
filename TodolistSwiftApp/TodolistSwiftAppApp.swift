@@ -16,14 +16,11 @@ struct TodolistSwiftAppApp: App {
             NavigationView {
                 TodolistView(tasks: $store.tasks)
             }
-            .onAppear {
-                TaskStore.fetch { result in
-                    switch result {
-                    case .failure(let error):
-                        fatalError(error.localizedDescription)
-                    case .success(let tasks):
-                        store.tasks = tasks
-                    }
+            .task {
+                do {
+                    store.tasks = try await TaskStore.fetch()
+                } catch {
+                    fatalError("Error loadint tasks.")
                 }
             }
         }

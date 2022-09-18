@@ -7,11 +7,32 @@
 
 import Foundation
 import SwiftUI
+import Alamofire
 
 class TaskStore: ObservableObject {
     @Published var tasks: [Task] = []
 
+    static func fetch() async throws -> [Task] {
+        try await withCheckedThrowingContinuation { continuation in
+            fetch {result in
+                switch result {
+                case .failure(let error):
+                    continuation.resume(throwing: error)
+                case .success(let tasks):
+                    continuation.resume(returning: tasks)
+                }
+            }
+        }
+    }
+
     static func fetch(completion: @escaping (Result<[Task], Error>) -> Void) {
-        completion(.success(Task.sampleData))
+        AF.request("http://localhost:8080/public/tasks").responseDecodable(of: [Task].self) { response in
+            switch response.result {
+            case .success(let tasks):
+                completion(.success(tasks))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
     }
 }

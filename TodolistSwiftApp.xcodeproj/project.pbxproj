@@ -70,6 +70,8 @@
 		30570E8828D6EC560064D36B /* Config.Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.Release.xcconfig; sourceTree = "<group>"; };
 		30570E8A28D6F0A50064D36B /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		30570E8C28D726370064D36B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		30570E8D28D7FDA60064D36B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		30570E8E28D7FDCD0064D36B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,8 @@
 				3044B67728C4EF7F004DB310 /* TodolistSwiftAppUITests */,
 				30570E8728D6E63A0064D36B /* Config.Debug.xcconfig */,
 				30570E8828D6EC560064D36B /* Config.Release.xcconfig */,
+				30570E8E28D7FDCD0064D36B /* .gitignore */,
+				30570E8D28D7FDA60064D36B /* README.md */,
 				3044B65B28C4EF7E004DB310 /* Products */,
 			);
 			sourceTree = "<group>";

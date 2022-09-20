@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TodolistView: View {
     @Binding var tasks: [Task]
+    @State private var isShowingSheet = false
 
     var body: some View {
         List {
@@ -19,6 +20,17 @@ struct TodolistView: View {
             }
         }
         .navigationTitle("タスク一覧")
+        .toolbar {
+            Button(action: {
+                isShowingSheet.toggle()
+            }, label: {
+                Image(systemName: "person.crop.circle")
+            })
+            .sheet(isPresented: $isShowingSheet) {
+                SignInView()
+            }
+        }
+        .onAppear()
     }
 }
 

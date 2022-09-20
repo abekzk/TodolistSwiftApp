@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 import Alamofire
+import FirebaseAuth
 
 class TaskStore: ObservableObject {
     @Published var tasks: [Task] = []
@@ -26,12 +27,19 @@ class TaskStore: ObservableObject {
     }
 
     static func fetch(completion: @escaping (Result<[Task], Error>) -> Void) {
-        AF.request(Configs.apiURL + "/public/tasks").responseDecodable(of: [Task].self) { response in
-            switch response.result {
-            case .success(let tasks):
-                completion(.success(tasks))
-            case .failure(let error):
-                completion(.failure(error))
+        let user = Auth.auth().currentUser
+        user?.getIDToken { idToken, error in
+            if let error = error {
+                return
+            }
+            let headers: HTTPHeaders = [.authorization(bearerToken: idToken ?? "")]
+            AF.request(Configs.apiURL + "/v1/tasks", headers: headers).responseDecodable(of: [Task].self) { response in
+                switch response.result {
+                case .success(let tasks):
+                    completion(.success(tasks))
+                case .failure(let error):
+                    completion(.failure(error))
+                }
             }
         }
     }

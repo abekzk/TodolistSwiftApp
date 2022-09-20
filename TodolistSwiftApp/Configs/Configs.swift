@@ -1,5 +1,5 @@
 //
-//  Config.swift
+//  Configs.swift
 //  TodolistSwiftApp
 //
 //  Created by Kazuki Abe on 2022/09/18.

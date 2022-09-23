@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct Task {
+struct Task: Codable {
     var id: String
     var title: String
     var description: String
     var status: TaskStatus
 }
 
-enum TaskStatus {
+enum TaskStatus: Int, Codable {
     case todo
     case done
 }

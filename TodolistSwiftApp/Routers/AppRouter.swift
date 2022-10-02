@@ -30,7 +30,7 @@ struct AppRouterView: View {
         switch self.router.screen {
         case .top:
             NavigationView {
-                TodolistView(tasks: $store.tasks)
+                TodolistView(viewModel: TodolistViewModel(repository: TaskRepository()))
             }
             .task {
                 do {

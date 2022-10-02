@@ -12,6 +12,20 @@ import FirebaseAuth
 
 class TaskStore: ObservableObject {
     @Published var tasks: [Task] = []
+    let repository: TaskRepositoryProtocol
+
+    init(repository: TaskRepositoryProtocol) {
+        self.repository = repository
+    }
+
+    func load() async throws {
+//        tasks = Task.sampleData
+        do {
+            tasks = try await repository.fetch()
+        } catch {
+            throw error
+        }
+    }
 
     static func fetch() async throws -> [Task] {
         try await withCheckedThrowingContinuation { continuation in

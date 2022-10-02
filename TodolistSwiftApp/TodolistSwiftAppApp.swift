@@ -21,7 +21,7 @@ struct TodolistSwiftAppApp: App {
     // register app delegate for Firebase setup
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
 
-    @StateObject private var store = TaskStore()
+    @StateObject private var store = TaskStore(repository: TaskRepository())
 
     var body: some Scene {
         WindowGroup {
@@ -30,7 +30,7 @@ struct TodolistSwiftAppApp: App {
             }
             .task {
                 do {
-                    store.tasks = try await TaskStore.fetch()
+                    try await store.load()
                 } catch {
                     fatalError("Error loadint tasks.")
                 }

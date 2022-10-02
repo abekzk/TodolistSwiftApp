@@ -24,11 +24,7 @@
 		3044B69628CC374F004DB310 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044B69428CC374F004DB310 /* Task.swift */; };
 		3044B69728CC374F004DB310 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044B69428CC374F004DB310 /* Task.swift */; };
 		3044B69928CC41B9004DB310 /* TodolistItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044B69828CC41B9004DB310 /* TodolistItemView.swift */; };
-		3044B69A28CC41B9004DB310 /* TodolistItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044B69828CC41B9004DB310 /* TodolistItemView.swift */; };
-		3044B69B28CC41B9004DB310 /* TodolistItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044B69828CC41B9004DB310 /* TodolistItemView.swift */; };
 		3044B69D28CC8D1B004DB310 /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044B69C28CC8D1B004DB310 /* TaskDetailView.swift */; };
-		3044B69E28CC8D1B004DB310 /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044B69C28CC8D1B004DB310 /* TaskDetailView.swift */; };
-		3044B69F28CC8D1B004DB310 /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044B69C28CC8D1B004DB310 /* TaskDetailView.swift */; };
 		3044B6A228CD937A004DB310 /* TaskStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044B6A128CD937A004DB310 /* TaskStore.swift */; };
 		3050B6C628E97EB7008D4FA4 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3050B6C528E97EB7008D4FA4 /* AppRouter.swift */; };
 		30570E8B28D6F0A50064D36B /* Configs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30570E8A28D6F0A50064D36B /* Configs.swift */; };
@@ -137,19 +133,17 @@
 		3044B65C28C4EF7E004DB310 /* TodolistSwiftApp */ = {
 			isa = PBXGroup;
 			children = (
-				3050B6BE28E96D15008D4FA4 /* Routers */,
-				30570E9328DD8D270064D36B /* Services */,
-				30570E8C28D726370064D36B /* Info.plist */,
-				30570E8928D6F0920064D36B /* Configs */,
-				3044B69328CC362E004DB310 /* Models */,
 				3044B65D28C4EF7E004DB310 /* TodolistSwiftAppApp.swift */,
-				3044B65F28C4EF7E004DB310 /* TodolistView.swift */,
-				3044B69828CC41B9004DB310 /* TodolistItemView.swift */,
-				3044B69C28CC8D1B004DB310 /* TaskDetailView.swift */,
+				3050B6BE28E96D15008D4FA4 /* Routers */,
+				3050B6C928E9B79E008D4FA4 /* Features */,
+				30570E9328DD8D270064D36B /* Services */,
+				3044B69328CC362E004DB310 /* Models */,
+				30570E8928D6F0920064D36B /* Configs */,
 				3044B6A128CD937A004DB310 /* TaskStore.swift */,
 				30570E8F28D80C680064D36B /* SignInView.swift */,
 				3044B66128C4EF7F004DB310 /* Assets.xcassets */,
 				3044B68A28C6BC26004DB310 /* GoogleService-Info.plist */,
+				30570E8C28D726370064D36B /* Info.plist */,
 				3044B66328C4EF7F004DB310 /* Preview Content */,
 			);
 			path = TodolistSwiftApp;
@@ -194,6 +188,24 @@
 				3050B6C528E97EB7008D4FA4 /* AppRouter.swift */,
 			);
 			path = Routers;
+			sourceTree = "<group>";
+		};
+		3050B6C928E9B79E008D4FA4 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				3050B6CA28E9B80B008D4FA4 /* TodoList */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		3050B6CA28E9B80B008D4FA4 /* TodoList */ = {
+			isa = PBXGroup;
+			children = (
+				3044B65F28C4EF7E004DB310 /* TodolistView.swift */,
+				3044B69828CC41B9004DB310 /* TodolistItemView.swift */,
+				3044B69C28CC8D1B004DB310 /* TaskDetailView.swift */,
+			);
+			path = TodoList;
 			sourceTree = "<group>";
 		};
 		30570E8928D6F0920064D36B /* Configs */ = {
@@ -400,9 +412,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3044B69E28CC8D1B004DB310 /* TaskDetailView.swift in Sources */,
 				3044B69628CC374F004DB310 /* Task.swift in Sources */,
-				3044B69A28CC41B9004DB310 /* TodolistItemView.swift in Sources */,
 				3044B66F28C4EF7F004DB310 /* TodolistSwiftAppTests.swift in Sources */,
 				30570E9128D839510064D36B /* SignInView.swift in Sources */,
 			);
@@ -414,10 +424,8 @@
 			files = (
 				30570E9228D839510064D36B /* SignInView.swift in Sources */,
 				3044B67B28C4EF7F004DB310 /* TodolistSwiftAppUITestsLaunchTests.swift in Sources */,
-				3044B69B28CC41B9004DB310 /* TodolistItemView.swift in Sources */,
 				3044B69728CC374F004DB310 /* Task.swift in Sources */,
 				3044B67928C4EF7F004DB310 /* TodolistSwiftAppUITests.swift in Sources */,
-				3044B69F28CC8D1B004DB310 /* TaskDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

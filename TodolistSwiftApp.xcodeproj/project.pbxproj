@@ -30,6 +30,7 @@
 		3044B69E28CC8D1B004DB310 /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044B69C28CC8D1B004DB310 /* TaskDetailView.swift */; };
 		3044B69F28CC8D1B004DB310 /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044B69C28CC8D1B004DB310 /* TaskDetailView.swift */; };
 		3044B6A228CD937A004DB310 /* TaskStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044B6A128CD937A004DB310 /* TaskStore.swift */; };
+		3050B6C628E97EB7008D4FA4 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3050B6C528E97EB7008D4FA4 /* AppRouter.swift */; };
 		30570E8B28D6F0A50064D36B /* Configs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30570E8A28D6F0A50064D36B /* Configs.swift */; };
 		30570E9028D80C680064D36B /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30570E8F28D80C680064D36B /* SignInView.swift */; };
 		30570E9128D839510064D36B /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30570E8F28D80C680064D36B /* SignInView.swift */; };
@@ -70,6 +71,7 @@
 		3044B69828CC41B9004DB310 /* TodolistItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodolistItemView.swift; sourceTree = "<group>"; };
 		3044B69C28CC8D1B004DB310 /* TaskDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
 		3044B6A128CD937A004DB310 /* TaskStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStore.swift; sourceTree = "<group>"; };
+		3050B6C528E97EB7008D4FA4 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		30570E8728D6E63A0064D36B /* Config.Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.Debug.xcconfig; sourceTree = "<group>"; };
 		30570E8828D6EC560064D36B /* Config.Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.Release.xcconfig; sourceTree = "<group>"; };
 		30570E8A28D6F0A50064D36B /* Configs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configs.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 		3044B65C28C4EF7E004DB310 /* TodolistSwiftApp */ = {
 			isa = PBXGroup;
 			children = (
+				3050B6BE28E96D15008D4FA4 /* Routers */,
 				30570E9328DD8D270064D36B /* Services */,
 				30570E8C28D726370064D36B /* Info.plist */,
 				30570E8928D6F0920064D36B /* Configs */,
@@ -183,6 +186,14 @@
 				3044B69428CC374F004DB310 /* Task.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		3050B6BE28E96D15008D4FA4 /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				3050B6C528E97EB7008D4FA4 /* AppRouter.swift */,
+			);
+			path = Routers;
 			sourceTree = "<group>";
 		};
 		30570E8928D6F0920064D36B /* Configs */ = {
@@ -380,6 +391,7 @@
 				3044B65E28C4EF7E004DB310 /* TodolistSwiftAppApp.swift in Sources */,
 				30570E9628DD8E790064D36B /* TaskRepository.swift in Sources */,
 				30570E9028D80C680064D36B /* SignInView.swift in Sources */,
+				3050B6C628E97EB7008D4FA4 /* AppRouter.swift in Sources */,
 				3044B69D28CC8D1B004DB310 /* TaskDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

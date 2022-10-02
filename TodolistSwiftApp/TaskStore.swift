@@ -18,8 +18,8 @@ class TaskStore: ObservableObject {
         self.repository = repository
     }
 
+    @MainActor
     func load() async throws {
-//        tasks = Task.sampleData
         do {
             tasks = try await repository.fetch()
         } catch {

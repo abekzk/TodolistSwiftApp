@@ -33,7 +33,6 @@ struct TodolistView: View {
         .task {
             do {
                 try await state.load()
-                debugPrint("Todolist on Task")
             } catch {
             }
         }

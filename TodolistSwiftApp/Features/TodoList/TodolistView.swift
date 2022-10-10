@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct TodolistView: View {
-    @Binding var tasks: [Task]
+    @Binding var state: TodolistStateProtocol
     @State private var isShowingSheet = false
 
     var body: some View {
         List {
-            ForEach($tasks, id: \.id) { $task in
+            ForEach($state.tasks, id: \.id) { $task in
                 NavigationLink(destination: TaskDetailView(task: $task)) {
                     TodolistItemView(task: task)
                 }
@@ -30,14 +30,24 @@ struct TodolistView: View {
                 SignInView()
             }
         }
-        .onAppear()
+        .task {
+            do {
+                try await state.load()
+            } catch {
+            }
+        }
     }
 }
 
 struct TodolistView_Previews: PreviewProvider {
+    struct Repository: TaskRepositoryProtocol {
+        func fetch() async throws -> [Task] {
+            return Task.sampleData
+        }
+    }
     static var previews: some View {
         NavigationView {
-            TodolistView(tasks: .constant(Task.sampleData))
+            TodolistView(state: .constant(TodolistState(repository: Repository(), tasks: [])))
         }
     }
 }

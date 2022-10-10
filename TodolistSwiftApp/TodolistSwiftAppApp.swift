@@ -21,20 +21,9 @@ struct TodolistSwiftAppApp: App {
     // register app delegate for Firebase setup
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
 
-    @StateObject private var store = TaskStore()
-
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                TodolistView(tasks: $store.tasks)
-            }
-            .task {
-                do {
-                    store.tasks = try await TaskStore.fetch()
-                } catch {
-                    fatalError("Error loadint tasks.")
-                }
-            }
+            AppRouterView()
         }
     }
 }

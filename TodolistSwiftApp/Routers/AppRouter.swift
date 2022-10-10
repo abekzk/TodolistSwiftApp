@@ -24,20 +24,13 @@ class AppRouter: ObservableObject {
 struct AppRouterView: View {
     @StateObject var router = AppRouter()
 
-    @StateObject private var store = TaskStore(repository: TaskRepository())
+    @StateObject private var store = TodolistStore()
 
     var body: some View {
         switch self.router.screen {
         case .top:
             NavigationView {
-                TodolistView(viewModel: TodolistViewModel(repository: TaskRepository()))
-            }
-            .task {
-                do {
-                    try await self.store.load()
-                } catch {
-                    fatalError("Error loadint tasks.")
-                }
+                TodolistView(state: $store.state)
             }
         }
     }

@@ -26,6 +26,7 @@
 		3044B69928CC41B9004DB310 /* TodolistItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044B69828CC41B9004DB310 /* TodolistItemView.swift */; };
 		3044B69D28CC8D1B004DB310 /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044B69C28CC8D1B004DB310 /* TaskDetailView.swift */; };
 		3044B6A228CD937A004DB310 /* TaskStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044B6A128CD937A004DB310 /* TaskStore.swift */; };
+		304CD18A28F3CDD10056DF9D /* TodolistStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304CD18928F3CDD10056DF9D /* TodolistStore.swift */; };
 		3050B6C628E97EB7008D4FA4 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3050B6C528E97EB7008D4FA4 /* AppRouter.swift */; };
 		3050B6CC28E9BB13008D4FA4 /* TodolistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3050B6CB28E9BB13008D4FA4 /* TodolistViewModel.swift */; };
 		30570E8B28D6F0A50064D36B /* Configs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30570E8A28D6F0A50064D36B /* Configs.swift */; };
@@ -68,6 +69,7 @@
 		3044B69828CC41B9004DB310 /* TodolistItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodolistItemView.swift; sourceTree = "<group>"; };
 		3044B69C28CC8D1B004DB310 /* TaskDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
 		3044B6A128CD937A004DB310 /* TaskStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStore.swift; sourceTree = "<group>"; };
+		304CD18928F3CDD10056DF9D /* TodolistStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodolistStore.swift; sourceTree = "<group>"; };
 		3050B6C528E97EB7008D4FA4 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		3050B6CB28E9BB13008D4FA4 /* TodolistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodolistViewModel.swift; sourceTree = "<group>"; };
 		30570E8728D6E63A0064D36B /* Config.Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.Debug.xcconfig; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				3044B65F28C4EF7E004DB310 /* TodolistView.swift */,
+				304CD18928F3CDD10056DF9D /* TodolistStore.swift */,
 				3050B6CB28E9BB13008D4FA4 /* TodolistViewModel.swift */,
 				3044B69828CC41B9004DB310 /* TodolistItemView.swift */,
 				3044B69C28CC8D1B004DB310 /* TaskDetailView.swift */,
@@ -399,6 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3044B66028C4EF7E004DB310 /* TodolistView.swift in Sources */,
+				304CD18A28F3CDD10056DF9D /* TodolistStore.swift in Sources */,
 				3044B69928CC41B9004DB310 /* TodolistItemView.swift in Sources */,
 				3044B6A228CD937A004DB310 /* TaskStore.swift in Sources */,
 				3050B6CC28E9BB13008D4FA4 /* TodolistViewModel.swift in Sources */,

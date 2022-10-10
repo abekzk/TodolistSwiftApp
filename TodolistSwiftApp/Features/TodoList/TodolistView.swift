@@ -7,17 +7,13 @@
 
 import SwiftUI
 
-struct TodolistView<VM>: View where VM: TodolistViewModelProtocol {
-    @ObservedObject var viewModel: VM
+struct TodolistView: View {
+    @Binding var state: TodolistStateProtocol
     @State private var isShowingSheet = false
-
-    init(viewModel: VM) {
-        self.viewModel = viewModel
-    }
 
     var body: some View {
         List {
-            ForEach($viewModel.tasks, id: \.id) { $task in
+            ForEach($state.tasks, id: \.id) { $task in
                 NavigationLink(destination: TaskDetailView(task: $task)) {
                     TodolistItemView(task: task)
                 }
@@ -36,10 +32,9 @@ struct TodolistView<VM>: View where VM: TodolistViewModelProtocol {
         }
         .task {
             do {
-                try await viewModel.load()
+                try await state.load()
                 debugPrint("Todolist on Task")
             } catch {
-
             }
         }
     }
@@ -48,7 +43,7 @@ struct TodolistView<VM>: View where VM: TodolistViewModelProtocol {
 struct TodolistView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            TodolistView(viewModel: TodolistViewModel(repository: TaskRepository()))
+            TodolistView(state: .constant(TodolistState()))
         }
     }
 }

@@ -40,9 +40,14 @@ struct TodolistView: View {
 }
 
 struct TodolistView_Previews: PreviewProvider {
+    struct Repository: TaskRepositoryProtocol {
+        func fetch() async throws -> [Task] {
+            return Task.sampleData
+        }
+    }
     static var previews: some View {
         NavigationView {
-            TodolistView(state: .constant(TodolistState()))
+            TodolistView(state: .constant(TodolistState(repository: Repository(), tasks: [])))
         }
     }
 }

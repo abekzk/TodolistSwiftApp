@@ -24,7 +24,7 @@ class AppRouter: ObservableObject {
 struct AppRouterView: View {
     @StateObject var router = AppRouter()
 
-    @StateObject private var store = TodolistStore()
+    @StateObject private var store = TodolistStore(state: TodolistState(repository: TaskRepository(), tasks: []))
 
     var body: some View {
         switch self.router.screen {

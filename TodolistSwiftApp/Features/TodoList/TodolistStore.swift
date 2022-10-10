@@ -8,7 +8,11 @@
 import Foundation
 
 class TodolistStore: ObservableObject {
-    @Published var state: TodolistStateProtocol = TodolistState()
+    @Published var state: TodolistStateProtocol
+
+    init(state: TodolistStateProtocol) {
+        self.state = state
+    }
 }
 
 protocol TodolistStateProtocol {
@@ -17,9 +21,9 @@ protocol TodolistStateProtocol {
 }
 
 struct TodolistState: TodolistStateProtocol {
-    var tasks: [Task] = Task.sampleData
+    let repository: TaskRepositoryProtocol
 
-    let repository: TaskRepositoryProtocol =  TaskRepository()
+    var tasks: [Task]
 
     mutating func load() async throws {
         do {
